@@ -1,0 +1,6 @@
+# Virtual Environment for Flask
+.venv/
+
+# Generated files for imported modules
+*.pyc
+__pycache__/
