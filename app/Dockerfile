@@ -11,6 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copying the entire directory to Docker image
 COPY . .
 
-# Expose port 5000 and run the app
-EXPOSE 5000 
+# Expose port 8000 and run the app
+EXPOSE 8000 
 CMD [ "python3", "app.py" ]
