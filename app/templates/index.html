@@ -2,16 +2,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> SSTI Demo with Python </title>
+    <title> ECHO </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1> Server-Side Template Injection Demo with Python and Flask </h1>
+        <h1> ECHO </h1>
+        <h3> Say something and ECHO will try to repeat it after you... </h3>
         
         <form method="post" action="/" class="form-container">
             <form method="post" action="/" class="form-container">
-                <textarea class="codeInput" name="code_input" placeholder="Test your payloads here...">{{request.form['code_input']}}</textarea>
+                <textarea class="codeInput" name="code_input" placeholder="Say something here...">{{request.form['code_input']}}</textarea>
                 <button id="runButton" type="submit">
                     Run 
                 </button>
@@ -19,7 +20,7 @@
         </form>
         
         <div class="result-container">
-            <h2>Output : </h2>
+            <h2>ECHO says : </h2>
             <pre>{{ result | safe }}</pre>
         </div>
     </div>
