@@ -10,13 +10,11 @@
         <h1> ECHO </h1>
         <h3> Say something and ECHO will try to repeat it after you... </h3>
         
-        <form method="post" action="/" class="form-container">
-            <form method="post" action="/" class="form-container">
-                <textarea class="codeInput" name="code_input" placeholder="Say something here...">{{request.form['code_input']}}</textarea>
-                <button id="runButton" type="submit">
-                    Run 
-                </button>
-            </form>
+        <form id="inputForm" method="post" action="/" class="form-container">
+            <textarea class="codeInput" name="code_input" placeholder="Say something here...">{{request.form['code_input']}}</textarea>
+            <button id="runButton" type="submit">
+                Run 
+            </button>
         </form>
         
         <div class="result-container">
@@ -24,4 +22,18 @@
             <pre>{{ result | safe }}</pre>
         </div>
     </div>
+
+    <script>
+        // Shift+Enter would press the "Run" button
+        // I'm adding this only because I was so lazy to use a mouse to click the button...
+        const inputForm = document.getElementById("inputForm");
+        const submitBtn = document.getElementById("runButton");
+
+        inputForm.addEventListener('keydown', function(event) {
+            if (event.shiftKey && event.key === 'Enter') {
+                event.preventDefault();
+                submitBtn.click();
+            }
+        })
+    </script>
 </body>
