@@ -91,3 +91,7 @@ pre {
     overflow-y: auto;
     user-select: text;
 }
+
+.disclaimer {
+    text-align: center;
+}
