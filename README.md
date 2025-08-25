@@ -13,7 +13,7 @@ You can run ***ECHO*** either using a docker or simply with a Python command. Ho
 ### 1. Clone the Repository
 
 ```bash
-git clone ----
+git clone https://github.com/SoePhonePyae/ssti_echo
 cd app
 ```
 
